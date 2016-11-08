@@ -1,0 +1,10 @@
+package principal.interfaz_usuario;
+
+import java.awt.Graphics;
+
+public class InterfazUsuario {
+
+	public static void dibujarBarraResistencia(Graphics g, int resistencia) {
+
+	}
+}

@@ -1,0 +1,8 @@
+package principal.interfaz_usuario;
+
+public class InterfazUsuario {
+	
+	public static void dibujarBarraResistencia(Graphics g, int resistencia){
+		
+	}
+}
