@@ -1,12 +1,14 @@
 package principal.mapas;
 
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import principal.Constantes;
 import principal.herramientas.CargadorRecursos;
+import principal.herramientas.DibujoDebug;
 import principal.sprites.HojaSprites;
 import principal.sprites.Sprite;
 
@@ -16,6 +18,13 @@ public class Mapa {
 
 	private final int ancho;
 	private final int alto;
+
+	private final Point posicionInicial;
+	private final Point posicionSalida;
+
+	private Rectangle zonaSalida;
+
+	private String siguienteMapa;
 
 	private final Sprite[] paleta;
 
@@ -53,6 +62,23 @@ public class Mapa {
 		String[] cadenasSprites = spritesEnteros.split(" ");
 
 		sprites = extraerSprites(cadenasSprites);
+
+		String posicion = partes[6];
+		String[] posiciones = posicion.split("-");
+
+		posicionInicial = new Point();
+		posicionInicial.x = Integer.parseInt(posiciones[0]) * Constantes.LADO_SPRITE;
+		posicionInicial.y = Integer.parseInt(posiciones[1]) * Constantes.LADO_SPRITE;
+
+		String salida = partes[7];
+		String[] datosSalida = salida.split("-");
+
+		posicionSalida = new Point();
+		posicionSalida.x = Integer.parseInt(datosSalida[0]);
+		posicionSalida.y = Integer.parseInt(datosSalida[1]);
+		siguienteMapa = datosSalida[2];
+
+		zonaSalida = new Rectangle();
 
 	}
 
@@ -123,6 +149,7 @@ public class Mapa {
 
 	public void actualizar(final int posicionX, final int posicionY) {
 		actualizarAreasColision(posicionX, posicionY);
+		actualizarZonaSalida(posicionX, posicionY);
 	}
 
 	private void actualizarAreasColision(final int posicionX, final int posicionY) {
@@ -144,6 +171,13 @@ public class Mapa {
 		}
 	}
 
+	private void actualizarZonaSalida(final int posicionX, final int posicionY) {
+		int puntoX = ((int) posicionSalida.getX()) * Constantes.LADO_SPRITE - posicionX + MARGEN_X;
+		int puntoY = ((int) posicionSalida.getY()) * Constantes.LADO_SPRITE - posicionY + MARGEN_Y;
+
+		zonaSalida = new Rectangle(puntoX, puntoY, Constantes.LADO_SPRITE, Constantes.LADO_SPRITE);
+	}
+
 	public void dibujar(Graphics g, final int posicionX, final int posicionY) {
 
 		for (int y = 0; y < this.alto; y++) {
@@ -153,7 +187,8 @@ public class Mapa {
 				int puntoX = x * Constantes.LADO_SPRITE - posicionX + MARGEN_X;
 				int puntoY = y * Constantes.LADO_SPRITE - posicionY + MARGEN_Y;
 
-				g.drawImage(imagen, puntoX, puntoY, null);
+				DibujoDebug.dibujarImagen(g, imagen, puntoX, puntoY);
+
 			}
 		}
 	}
@@ -168,4 +203,19 @@ public class Mapa {
 		return new Rectangle(x, y, ancho, alto);
 	}
 
+	public Point obtenerPosicionInicial() {
+		return posicionInicial;
+	}
+
+	public Point obtenerPosicionSalida() {
+		return posicionSalida;
+	}
+
+	public String obtenerSiguienteMapa() {
+		return siguienteMapa;
+	}
+
+	public Rectangle obtenerZonaSalida() {
+		return zonaSalida;
+	}
 }

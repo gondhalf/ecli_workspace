@@ -11,6 +11,7 @@ import principal.Constantes;
 import principal.GestorPrincipal;
 import principal.control.GestorControles;
 import principal.control.Raton;
+import principal.herramientas.DibujoDebug;
 import principal.maquinaestado.GestorEstados;
 
 public class SuperficieDibujo extends Canvas {
@@ -26,7 +27,7 @@ public class SuperficieDibujo extends Canvas {
 		this.ancho = ancho;
 		this.alto = alto;
 
-		this.raton = new Raton();
+		this.raton = new Raton(this);
 
 		// java no intenta forzar el repintado del canvas
 		setIgnoreRepaint(true);
@@ -36,6 +37,10 @@ public class SuperficieDibujo extends Canvas {
 		addKeyListener(GestorControles.teclado);
 		setFocusable(true);
 		requestFocus();
+	}
+
+	public void actualizar() {
+		raton.actualizar(this);
 	}
 
 	public void dibujar(final GestorEstados ge) {
@@ -48,8 +53,13 @@ public class SuperficieDibujo extends Canvas {
 
 		final Graphics2D g = (Graphics2D) buffer.getDrawGraphics();
 
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, Constantes.ANCHO_PANTALLA_COMPLETA, Constantes.ALTO_PANTALLA_COMPLETA);
+		DibujoDebug.reiniciarContadorObjetos();
+
+		DibujoDebug.dibujarRectanguloRelleno(g, 0, 0, Constantes.ANCHO_PANTALLA_COMPLETA,
+				Constantes.ALTO_PANTALLA_COMPLETA, Color.BLACK);
+		// g.setColor(Color.BLACK);
+		// g.fillRect(0, 0, Constantes.ANCHO_PANTALLA_COMPLETA,
+		// Constantes.ALTO_PANTALLA_COMPLETA);
 		// para escalar el juego en pantalla completa
 		if (Constantes.FACTOR_ESCALADO_X != 1.0 || Constantes.FACTOR_ESCALADO_Y != 1.0) {
 			g.scale(Constantes.FACTOR_ESCALADO_X, Constantes.FACTOR_ESCALADO_Y);
@@ -57,9 +67,14 @@ public class SuperficieDibujo extends Canvas {
 
 		ge.dibujar(g);
 
-		g.setColor(Color.BLUE);
-		g.drawString("FPS: " + GestorPrincipal.obtenerFPS(), 20, 60);
-		g.drawString("APS: " + GestorPrincipal.obtenerAPS(), 20, 50);
+		DibujoDebug.dibujarString(g, "FPS: " + GestorPrincipal.obtenerFPS(), 20, 60, Color.BLUE);
+		// g.setColor(Color.BLUE);
+		// g.drawString("FPS: " + GestorPrincipal.obtenerFPS(), 20, 60);
+		DibujoDebug.dibujarString(g, "APS: " + GestorPrincipal.obtenerAPS(), 20, 50, Color.BLUE);
+		// g.drawString("APS: " + GestorPrincipal.obtenerAPS(), 20, 50);
+		raton.dibujar(g);
+
+		DibujoDebug.dibujarString(g, "OPF: " + DibujoDebug.obtenerContadorObjetos(), 20, 230);
 		// para dibujar de forma sincronizada
 		Toolkit.getDefaultToolkit().sync();
 

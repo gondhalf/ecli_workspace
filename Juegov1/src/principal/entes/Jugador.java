@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 import principal.Constantes;
 import principal.control.GestorControles;
+import principal.herramientas.DibujoDebug;
 import principal.mapas.Mapa;
 import principal.sprites.HojaSprites;
 
@@ -47,9 +48,9 @@ public class Jugador {
 
 	private Mapa mapa;
 
-	public Jugador(double posicionX, double posicionY, Mapa mapa) {
-		this.posicionX = posicionX;
-		this.posicionY = posicionY;
+	public Jugador(Mapa mapa) {
+		posicionX = mapa.obtenerPosicionInicial().getX();
+		posicionY = mapa.obtenerPosicionInicial().getY();
 
 		direccion = 0;
 		enMovimiento = false;
@@ -326,8 +327,10 @@ public class Jugador {
 		final int centroY = Constantes.ALTO_JUEGO / 2 - Constantes.LADO_SPRITE / 2;
 
 		g.setColor(Color.GREEN);
-		g.drawImage(imagenActual, centroX, centroY, null);
-		g.drawString("Resistencia: " + resistencia, 20, 40);
+		DibujoDebug.dibujarImagen(g, imagenActual, centroX, centroY);
+		// g.drawImage(imagenActual, centroX, centroY, null);
+		DibujoDebug.dibujarString(g, "Resistencia: " + resistencia, 20, 40);
+		// g.drawString("Resistencia: " + resistencia, 20, 40);
 		// para probar colisiones
 		// g.drawRect(LIMITE_ARRIBA.x, LIMITE_ARRIBA.y, LIMITE_ARRIBA.width,
 		// LIMITE_ARRIBA.height);
@@ -354,4 +357,9 @@ public class Jugador {
 	public double obtenerPosicionY() {
 		return posicionY;
 	}
+
+	public Rectangle obtener_LIMITE_ARRIBA() {
+		return LIMITE_ARRIBA;
+	}
+
 }

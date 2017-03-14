@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.awt.Canvas"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="control.Teclado"/>
 <fullyQualifiedTypeName name="graficos.Pantalla"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
@@ -15,7 +14,6 @@
 <fullyQualifiedTypeName name="java.awt.GraphicsConfiguration"/>
 <fullyQualifiedTypeName name="java.awt.GraphicsEnvironment"/>
 <fullyQualifiedTypeName name="java.awt.Transparency"/>
-<fullyQualifiedTypeName name="principal.graficos.SuperficieDibujo"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="principal.maquinaestado.GestorEstados"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferStrategy"/>
@@ -28,15 +26,32 @@
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="principal.herramientas.CargadorRecursos"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
-<fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="principal.sprites.HojaSprites"/>
-<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
 <fullyQualifiedTypeName name="principal.control.GestorControles"/>
 <fullyQualifiedTypeName name="principal.interfaz_usuario.InterfazUsuario"/>
 <fullyQualifiedTypeName name="principal.GestorPrincipal"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
+<fullyQualifiedTypeName name="java.awt.MouseInfo"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+<fullyQualifiedTypeName name="principal.graficos.SuperficieDibujo"/>
 <fullyQualifiedTypeName name="principal.Constantes"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="principal.herramientas.DibujoDebug"/>
+<fullyQualifiedTypeName name="java.time.Year"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.Graphics2D"/>
+<fullyQualifiedTypeName name="clases.TableroJuego"/>
+<fullyQualifiedTypeName name="java.awt.geom.Rectangle2D.Double"/>
+<fullyQualifiedTypeName name="clases.Raqueta"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyAdapter"/>
+<fullyQualifiedTypeName name="clases.EventoTeclado"/>
+<fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
 </qualifiedTypeNameHistroy>

@@ -17,6 +17,7 @@ public class Constantes {
 	public static int CENTRO_VENTANA_Y = ALTO_JUEGO / 2;
 
 	public static String RUTA_MAPA = "/texto/prueba.map";
+	public static String RUTA_MAPA2 = "/texto/prueba2.map";
 	public static String RUTA_ICONO_RATON = "/imagenes/icono/iconocursor.png";
 	public static String RUTA_PERSONAJE = "/imagenes/hojasPersonajes/goku_mapa.png";
 	public static String RUTA_ICONO_VENTANA = "/imagenes/icono/iconoventana.png";
