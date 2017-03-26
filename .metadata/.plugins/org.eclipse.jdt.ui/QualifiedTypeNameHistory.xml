@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.Dimension"/>
-<fullyQualifiedTypeName name="principal.maquinaestado.GestorEstados"/>
-<fullyQualifiedTypeName name="java.awt.image.BufferStrategy"/>
-<fullyQualifiedTypeName name="principal.sprites.Sprite"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.lang.ClassLoader"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-<fullyQualifiedTypeName name="java.awt.Toolkit"/>
-<fullyQualifiedTypeName name="principal.herramientas.CargadorRecursos"/>
-<fullyQualifiedTypeName name="principal.sprites.HojaSprites"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
 <fullyQualifiedTypeName name="principal.control.GestorControles"/>
@@ -41,7 +30,6 @@
 <fullyQualifiedTypeName name="org.lwjgl.opengl.PixelFormat"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.ContextAttribs"/>
 <fullyQualifiedTypeName name="renderEngine.DisplayManager"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
 <fullyQualifiedTypeName name="java.nio.FloatBuffer"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -49,15 +37,27 @@
 <fullyQualifiedTypeName name="renderEngine.Renderer"/>
 <fullyQualifiedTypeName name="renderEngine.RawModel"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL15"/>
-<fullyQualifiedTypeName name="org.lwjgl.BufferUtils"/>
 <fullyQualifiedTypeName name="java.nio.IntBuffer"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.GL20"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
 <fullyQualifiedTypeName name="shaders.ShaderProgram"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.opengl.TextureLoader"/>
+<fullyQualifiedTypeName name="models.RawModel"/>
+<fullyQualifiedTypeName name="textures.ModelTexture"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL13"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL20"/>
+<fullyQualifiedTypeName name="org.lwjgl.BufferUtils"/>
+<fullyQualifiedTypeName name="org.lwjgl.util.vector.Matrix4f"/>
+<fullyQualifiedTypeName name="models.TexturedModel"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.parser.Entity"/>
+<fullyQualifiedTypeName name="entities.Entity"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
 <fullyQualifiedTypeName name="shaders.StaticShader"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="toolbox.Maths"/>
+<fullyQualifiedTypeName name="entities.Camera"/>
 </qualifiedTypeNameHistroy>
