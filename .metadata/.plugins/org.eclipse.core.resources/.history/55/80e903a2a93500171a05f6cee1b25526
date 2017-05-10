@@ -1,0 +1,13 @@
+package pruebas;
+
+import java.awt.Color;
+import java.awt.Component;
+
+public class Componente extends Component {
+	@Override
+	public void setBackground(Color c) {
+		c = Color.BLUE;
+		super.setBackground(c);
+	}
+
+}

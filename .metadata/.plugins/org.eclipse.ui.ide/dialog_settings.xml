@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="G:\ecli_workspace\TPV"/>
+		<item value="C:\Users\Asier1\Desktop\tpv2\tpv\TPV"/>
 		<item value="G:\ecli_workspace\Juego"/>
 	</list>
 	<section name="ResourceNavigator">

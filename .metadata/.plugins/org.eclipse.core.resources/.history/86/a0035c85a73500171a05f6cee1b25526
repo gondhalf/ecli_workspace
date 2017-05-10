@@ -1,0 +1,7 @@
+package pruebas;
+
+import java.awt.Component;
+
+public class Componente extends Component {
+
+}

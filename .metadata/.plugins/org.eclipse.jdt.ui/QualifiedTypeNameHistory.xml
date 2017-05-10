@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="principal.GestorPrincipal"/>
-<fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
-<fullyQualifiedTypeName name="java.awt.MouseInfo"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
-<fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
-<fullyQualifiedTypeName name="principal.graficos.SuperficieDibujo"/>
-<fullyQualifiedTypeName name="principal.Constantes"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="principal.herramientas.DibujoDebug"/>
 <fullyQualifiedTypeName name="java.time.Year"/>
@@ -60,4 +53,11 @@
 <fullyQualifiedTypeName name="org.lwjgl.util.vector.Vector2f"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="renderEngine.OBJLoader"/>
+<fullyQualifiedTypeName name="java.awt.Component"/>
+<fullyQualifiedTypeName name="pruebas.Componente"/>
+<fullyQualifiedTypeName name="javax.swing.Icon"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.TabbedPaneUI"/>
+<fullyQualifiedTypeName name="javax.swing.UIManager"/>
 </qualifiedTypeNameHistroy>

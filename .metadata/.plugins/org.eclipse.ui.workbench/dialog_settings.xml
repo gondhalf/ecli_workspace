@@ -7,8 +7,8 @@
 	<section name="EditorSelectionDialog">
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="250" key="dialogHeight"/>
+		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -18,6 +18,8 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 	<section name="FileSystemExportWizard">
 		<item value="false" key="WizardFileSystemResourceExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
 		<item value="false" key="WizardFileSystemResourceExportPage1.STORE_RESOLVE_LINKED_RESOURCES_ID"/>
@@ -25,6 +27,13 @@
 		<list key="WizardFileSystemResourceExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="C:\Users\Asier1\Desktop\exap"/>
 		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="706" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="744" key="DIALOG_HEIGHT"/>
+		<item value="-77" key="DIALOG_X_ORIGIN"/>
+		<item value="-300" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.export.FileSystem" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>

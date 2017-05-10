@@ -1,0 +1,25 @@
+package model;
+
+import javax.swing.JButton;
+import java.awt.Color;
+
+@SuppressWarnings("serial")
+public class BotonProducto extends JButton{
+	
+	private Producto producto;
+
+	public BotonProducto(Producto prod) {
+		setBackground(Color.RED);
+		setProducto(prod);
+		this.setIcon(prod.getIcon());
+	}
+
+	public Producto getProducto() {
+		return producto;
+	}
+
+	public void setProducto(Producto producto) {
+		this.producto = producto;
+	}
+
+}
