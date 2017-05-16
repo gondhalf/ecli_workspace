@@ -12,13 +12,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.DefaultCellEditor;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
 import javax.swing.JTable;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
@@ -35,6 +34,7 @@ public class VentasPanel extends JPanel {
 	 * Create the panel.
 	 */
 	public VentasPanel() {
+		setFont(new Font("Arial", Font.PLAIN, 20));
 		setBackground(Color.DARK_GRAY);
 		setForeground(Color.DARK_GRAY);
 		setBorder(new LineBorder(Color.DARK_GRAY));
@@ -50,14 +50,17 @@ public class VentasPanel extends JPanel {
 		};
 
 		JScrollPane scrollPane_tabla = new JScrollPane();
+		scrollPane_tabla.setFont(new Font("Arial", Font.PLAIN, 20));
 		scrollPane_tabla.setBorder(new LineBorder(Color.DARK_GRAY));
 		scrollPane_tabla.setViewportBorder(new LineBorder(Color.DARK_GRAY));
 		scrollPane_tabla.setBackground(Color.DARK_GRAY);
 		add(scrollPane_tabla);
 		table_Ventas = new JTable(dm);
+		table_Ventas.setFont(new Font("Arial", Font.PLAIN, 20));
 		table_Ventas.setBackground(Color.WHITE);
 		table_Ventas.setForeground(Color.DARK_GRAY);
 		table_Ventas.setBorder(new LineBorder(Color.DARK_GRAY));
+
 		scrollPane_tabla.setViewportView(table_Ventas);
 
 		table_Ventas.getColumnModel().getColumn(1).setPreferredWidth(80);
@@ -71,6 +74,7 @@ public class VentasPanel extends JPanel {
 		table_Ventas.getColumnModel().getColumn(3).setMaxWidth(50);
 		table_Ventas.getColumn("Button").setCellRenderer(new ButtonRenderer());
 		table_Ventas.getColumn("Button").setCellEditor(new ButtonEditor(new JCheckBox()));
+
 		table_Ventas.setRowHeight(30);
 
 		JPanel panel_Opcines_BtnCobrar = new JPanel();
@@ -79,13 +83,13 @@ public class VentasPanel extends JPanel {
 		panel_Opcines_BtnCobrar.setBackground(Color.DARK_GRAY);
 		add(panel_Opcines_BtnCobrar);
 		GridBagLayout gbl_panel_Opcines_BtnCobrar = new GridBagLayout();
-		gbl_panel_Opcines_BtnCobrar.columnWidths = new int[] { 0, 0, 0, 0 };
-		gbl_panel_Opcines_BtnCobrar.rowHeights = new int[] { 0, 0, 0, 0 };
-		gbl_panel_Opcines_BtnCobrar.columnWeights = new double[] { 1.0, 0.0, 0.0, Double.MIN_VALUE };
-		gbl_panel_Opcines_BtnCobrar.rowWeights = new double[] { 0.0, 1.0, 0.0, Double.MIN_VALUE };
+		gbl_panel_Opcines_BtnCobrar.columnWidths = new int[] { 0, 0 };
+		gbl_panel_Opcines_BtnCobrar.rowHeights = new int[] { 0, 0, 0 };
+		gbl_panel_Opcines_BtnCobrar.columnWeights = new double[] { 1.0, Double.MIN_VALUE };
+		gbl_panel_Opcines_BtnCobrar.rowWeights = new double[] { 0.0, 1.0, Double.MIN_VALUE };
 		panel_Opcines_BtnCobrar.setLayout(gbl_panel_Opcines_BtnCobrar);
 
-		JButton btnCobrar = new JButton("Cobrar");
+		JButton btnCobrar = new JButton(new ImageIcon("imagenes/bcobrar.png"));
 		btnCobrar.setForeground(Color.DARK_GRAY);
 		btnCobrar.setPreferredSize(new Dimension(100, 50));
 		btnCobrar.addActionListener(new ActionListener() {
@@ -93,27 +97,21 @@ public class VentasPanel extends JPanel {
 				btnCobrarClick();
 			}
 		});
+
 		GridBagConstraints gbc_btnCobrar = new GridBagConstraints();
 		gbc_btnCobrar.insets = new Insets(0, 0, 5, 0);
 		gbc_btnCobrar.gridx = 0;
 		gbc_btnCobrar.gridy = 0;
 		panel_Opcines_BtnCobrar.add(btnCobrar, gbc_btnCobrar);
 
-		JTabbedPane tabbedPane_Opciones = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane_Opciones.setForeground(Color.DARK_GRAY);
-		tabbedPane_Opciones.setBorder(new LineBorder(Color.DARK_GRAY));
-		GridBagConstraints gbc_tabbedPane_Opciones = new GridBagConstraints();
-		gbc_tabbedPane_Opciones.fill = GridBagConstraints.BOTH;
-		gbc_tabbedPane_Opciones.gridx = 0;
-		gbc_tabbedPane_Opciones.gridy = 1;
-		panel_Opcines_BtnCobrar.add(tabbedPane_Opciones, gbc_tabbedPane_Opciones);
-		tabbedPane_Opciones.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
-
-		JPanel panel_Calculadora = new JPanel();
-		panel_Calculadora.setBackground(Color.GRAY);
-		panel_Calculadora.setForeground(Color.DARK_GRAY);
-		panel_Calculadora.setBorder(new LineBorder(Color.DARK_GRAY));
-		tabbedPane_Opciones.addTab("Calculadora", null, panel_Calculadora, null);
+		JPanel panel_Opciones = new JPanel();
+		panel_Opciones.setBorder(new LineBorder(Color.DARK_GRAY));
+		panel_Opciones.setBackground(Color.GRAY);
+		GridBagConstraints gbc_panel_Opciones = new GridBagConstraints();
+		gbc_panel_Opciones.fill = GridBagConstraints.BOTH;
+		gbc_panel_Opciones.gridx = 0;
+		gbc_panel_Opciones.gridy = 1;
+		panel_Opcines_BtnCobrar.add(panel_Opciones, gbc_panel_Opciones);
 
 	}
 
@@ -157,13 +155,13 @@ public class VentasPanel extends JPanel {
 				setForeground(table.getSelectionForeground());
 				setBackground(table.getSelectionBackground());
 			} else {
-				setForeground(table.getForeground());
-				setBackground(UIManager.getColor("Button.background"));
+				setForeground(Color.WHITE);
+				setBackground(Color.RED);
 			}
 
 			setText((value == null) ? "" : value.toString());
 
-			setFont(new Font("Tahoma", Font.PLAIN, 11));
+			setFont(new Font("Arial", Font.PLAIN, 20));
 			setMargin(new Insets(0, 0, 0, 0));
 
 			return this;

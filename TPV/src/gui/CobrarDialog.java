@@ -2,6 +2,9 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -10,10 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.GridLayout;
-
 @SuppressWarnings("serial")
 public class CobrarDialog extends JDialog {
 
@@ -21,7 +20,8 @@ public class CobrarDialog extends JDialog {
 
 	/**
 	 * Create the dialog.
-	 * @param total 
+	 * 
+	 * @param total
 	 */
 	public CobrarDialog(DefaultTableModel dm, double total) {
 		setModal(true);
@@ -86,18 +86,19 @@ public class CobrarDialog extends JDialog {
 			}
 		}
 	}
-	
-	private void okButtonClick(DefaultTableModel dm){
-		int res=JOptionPane.showConfirmDialog(null, "Estas segur@?", "Cobrar?", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-		if(res==JOptionPane.YES_OPTION){
+
+	private void okButtonClick(DefaultTableModel dm) {
+		int res = JOptionPane.showConfirmDialog(null, "Estas segur@?", "Cobrar?", JOptionPane.YES_NO_OPTION,
+				JOptionPane.WARNING_MESSAGE);
+		if (res == JOptionPane.YES_OPTION) {
 			// ANADIR TICKET A LA BBDD
 			dm.setRowCount(0);
 			dispose();
 		}
 	}
-	
-	private void imprimirTicket(){
-		
+
+	private void imprimirTicket() {
+
 	}
 
 }

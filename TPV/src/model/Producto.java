@@ -3,17 +3,18 @@ package model;
 import javax.swing.ImageIcon;
 
 public class Producto {
-	
+
 	private String nombre;
 	private Double precio;
 	private String categoria;
 	private ImageIcon icon;
-	
+
 	public Producto(String nombre, Double precio, String categoria) {
 		setNombre(nombre);
 		setPrecio(precio);
 		setCategoria(categoria);
-		setIcon(new ImageIcon("images/"+nombre+".png"));
+		setIcon(new ImageIcon("images/" + nombre + ".png"));
+
 	}
 
 	public String getNombre() {
@@ -47,6 +48,5 @@ public class Producto {
 	public void setIcon(ImageIcon icon) {
 		this.icon = icon;
 	}
-	
 
 }
